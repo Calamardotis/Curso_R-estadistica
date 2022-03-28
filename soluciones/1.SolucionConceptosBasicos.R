@@ -1,4 +1,4 @@
-####SOLUCIONES 1. Ejercicio Conceptos básicos####
+####SOLUCIONES 1. Ejercicio Conceptos bÃ¡sicos####
 #install.packages("datasets")
 rm(list=ls())
 library(datasets)
@@ -18,8 +18,8 @@ mean(PesoPollo$weight) #Media
 
 #4.
 var(PesoPollo$weight) #Varianza
-range(PesoPollo$weight) #Rango de valores (mínimo y máximo)
-sqrt(var(PesoPollo$weight)) #Desviación estandar = raiz cuadrada de la varianza
+range(PesoPollo$weight) #Rango de valores (mÃ­nimo y mÃ¡ximo)
+sqrt(var(PesoPollo$weight)) #DesviaciÃ³n estandar = raiz cuadrada de la varianza
 
 #5.
 summary(PesoPollo$weight)
@@ -29,7 +29,7 @@ abline(v=163.8,col="purple")
 
 #6.
 str(PesoPollo)
-#¿Varía el peso de los pollos en función de la dieta que siguen?
+#Â¿VarÃ­a el peso de los pollos en funciÃ³n de la dieta que siguen?
 #Ho: El peso no difiere entre pollos con distintas dietas
 #Ha: El peso difiere entre pollos con distintas dietas
 
