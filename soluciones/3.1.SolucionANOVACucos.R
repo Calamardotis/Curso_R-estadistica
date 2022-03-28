@@ -8,8 +8,8 @@ data("cuckoos")
 
 str(cuckoos) #120 observaciones (datos) para cuatro variables
 summary(cuckoos) #En la columna de species podemos ver cuantas
-#observaciones tiene cada especie. Más o menos las mismas, 
-# pero meadow.pipit tiene muchas más observaciones que el resto.
+#observaciones tiene cada especie. MÃ¡s o menos las mismas, 
+# pero meadow.pipit tiene muchas mÃ¡s observaciones que el resto.
 
 #2.
 ck<-subset(cuckoos, cuckoos$species!="meadow.pipit")
@@ -18,20 +18,20 @@ str(ck)
 #3.
 mean(ck$length) #Longitud media de los huevos
 
-range(ck$breadth) #Mín y max de la variable anchura
+range(ck$breadth) #MÃ­n y max de la variable anchura
 summary(ck$breadth) #Resumen de los valores de la variable anchura
 
 #4.
-#Ho: La especie parasitada no afecta al tamaño de los huevos de cuco
-#Ha: La especie parasitada afecta al tamaño de los huevos de cuco
+#Ho: La especie parasitada no afecta al tamaÃ±o de los huevos de cuco
+#Ha: La especie parasitada afecta al tamaÃ±o de los huevos de cuco
 
 
 #5.
 #Normalidad:
-qqnorm(ck$length) #Más o menos bien, 
-qqline(ck$length) #con más observaciones sería más normal
+qqnorm(ck$length) #MÃ¡s o menos bien, 
+qqline(ck$length) #con mÃ¡s observaciones serÃ­a mÃ¡s normal
 hist(ck$length) #Meh, demoslo por bueno
-shapiro.test(ck$length) #No significativo = distribución normal
+shapiro.test(ck$length) #No significativo = distribuciÃ³n normal
 
 #Varianza:
 library(car)
@@ -41,7 +41,7 @@ boxplot(ck$length~ck$species)
 
 #6.
 aov(ck$length~ck$species)%>% summary() 
-#La especie influye en el tamaño de los huevos
+#La especie influye en el tamaÃ±o de los huevos
 aov(ck$length~ck$species)%>%TukeyHSD()
 #Tukey Post-Hoc test nos permite obtener la
 #diferencia en la variable estudiada entre parejas de especies  
@@ -56,7 +56,7 @@ lm(ck$length~ck$species)%>%summary()
 
 #7.
 str(ck)
-#Basiquísimo
+#BasiquÃ­simo
 boxplot(ck$length~ck$species, ylab="longitud huevos (mm)",
         xlab="Especies parasitadas")
 
