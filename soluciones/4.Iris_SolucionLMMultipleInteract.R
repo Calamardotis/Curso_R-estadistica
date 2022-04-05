@@ -1,11 +1,11 @@
 
-##4.2 Ejercicios Modelos Lineales múltiples con interaccion####
+##4.2 Ejercicios Modelos Lineales mÃºltiples con interaccion####
 
 data("iris")
 str(iris)
 #1. 
-#H0: la longitud de los sépalos no está relacionada con la longitud de los pétalos para ninguna de las especies estudiadas
-#Ha: la longitud de los sépalos  está relacionada con la longitud de los pétalos al menos en una de las especies estudiadas
+#H0: la longitud de los sÃ©palos no estÃ¡ relacionada con la longitud de los pÃ©talos para ninguna de las especies estudiadas
+#Ha: la longitud de los sÃ©palos  estÃ¡ relacionada con la longitud de los pÃ©talos al menos en una de las especies estudiadas
 
 #2. 
 lm(data=iris, Sepal.Length~Petal.Length*Species)%>%summary()
@@ -15,9 +15,9 @@ lm(data=iris, Sepal.Length~Petal.Length*Species)%>%summary()
 #Para virginica: y=(4.2132-3.1535)+(0.5423+0.4534)*x
 
 #3.
-#Existe una relación débil entre la longitud de los pétalos y sépalos 
-#en la especie setosa (interpretación de pendientede grupo de referencia)
-#De hecho, la relación morfológica entre sépalos y pétalos no difiere entre 
+#Existe una relaciÃ³n dÃ©bil entre la longitud de los pÃ©talos y sÃ©palos 
+#en la especie setosa (interpretaciÃ³n de pendientede grupo de referencia)
+#De hecho, la relaciÃ³n morfolÃ³gica entre sÃ©palos y pÃ©talos no difiere entre 
 #las especies estudiadas (significancia de pendiente del resto de especies)
 
 #4.
@@ -28,7 +28,7 @@ abline(a=4.2132,b=0.5423,col="green")
 abline(a=4.2132-1.8056,b=0.5423+0.286,col="red")
 abline(a=4.2132-3.1535,b=0.5423+0.4534,col="black")
 
-#ó
+#Ã³
 library(ggplot2)
 ggplot(iris, aes(x=Petal.Length, y=Sepal.Length,col=Species))+
   geom_point(size=3)+
@@ -36,6 +36,6 @@ ggplot(iris, aes(x=Petal.Length, y=Sepal.Length,col=Species))+
   geom_abline(intercept=4.2132,slope=0.5423,color="pink",size=1.5)+
   geom_abline(intercept=4.2132-1.8056,slope=0.5423+0.286,color="green",size=1.5)+
   geom_abline(intercept=4.2132-3.1535,slope=0.5423+0.4534,color="blue",size=1.5)+
-  labs(x="Longitud pétalos (mm)", y="Anchura sépalos (mm)")
+  labs(x="Longitud pÃ©talos (mm)", y="Anchura sÃ©palos (mm)")
 
 #######
