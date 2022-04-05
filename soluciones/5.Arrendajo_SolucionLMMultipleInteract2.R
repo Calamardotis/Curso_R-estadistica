@@ -1,4 +1,4 @@
-#######Ejercicio 2 Modelos lineales con interacciÛn####
+#######Ejercicio 2 Modelos lineales con interacci√≥n####
 library(Stat2Data)
 #1.
 data("BlueJays")
@@ -6,10 +6,10 @@ BJ<-BlueJays
 str(BJ)
 
 #2.
-#H0: No existe relaciÛn entre la masa y 
+#H0: No existe relaci√≥n entre la masa y 
 #la longitud del pico de hembras y machos de arrendajos
 
-#Ha: Existe relaciÛn entre la masa
+#Ha: Existe relaci√≥n entre la masa
 #y la longitud del pico de los arrendajos, y esta difiere entre sexos
 
 #3.
@@ -29,7 +29,7 @@ lm(BJ$Mass~BJ$BillLength*BJ$KnownSex)%>%summary()
 #Masa de hembras: 27.26+1.76*Longitud de pico
 #Masa de machos: (27.26+26.23)+(1.76-0.98)*longitd pico
 
-#18.47% de la varianza est· explicada por el modelo
+#18.47% de la varianza est√° explicada por el modelo
 
 #5.
 plot(BJ$Mass~BJ$BillLength)
